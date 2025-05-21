@@ -1,0 +1,4 @@
+                case_id   table_name  ...   status        remarks
+0  user_events_186fe24a  user_events  ...  SUCCESS  3 rows loaded
+
+[1 rows x 8 columns]

@@ -1,0 +1,7 @@
+[32m2025-05-14 14:01:25 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 46f226ab-3aef-4429-980b-f7b4c514d54d - 124137 - LOGS_CAPTURED - Started capturing logs in process (pid: 124137).
+[32m2025-05-14 14:01:25 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 46f226ab-3aef-4429-980b-f7b4c514d54d - 124137 - load_raw_memo_data - STEP_START - Started execution of step "load_raw_memo_data".
+[32m2025-05-14 14:01:25 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 46f226ab-3aef-4429-980b-f7b4c514d54d - 124137 - load_raw_memo_data - STEP_OUTPUT - Yielded output "result" of type "DataFrame". (Type check passed).
+[32m2025-05-14 14:01:25 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 46f226ab-3aef-4429-980b-f7b4c514d54d - load_raw_memo_data - Writing file at: /home/wnsgu/puzzle/shinhan-life/dagster/sl-project/.tmp_dagster_home_umi0sa3u/storage/load_raw_memo_data using PickledObjectFilesystemIOManager...
+[32m2025-05-14 14:01:25 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 46f226ab-3aef-4429-980b-f7b4c514d54d - 124137 - load_raw_memo_data - ASSET_MATERIALIZATION - Materialized value load_raw_memo_data.
+[32m2025-05-14 14:01:25 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 46f226ab-3aef-4429-980b-f7b4c514d54d - 124137 - load_raw_memo_data - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-05-14 14:01:25 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 46f226ab-3aef-4429-980b-f7b4c514d54d - 124137 - load_raw_memo_data - STEP_SUCCESS - Finished execution of step "load_raw_memo_data" in 70ms.

@@ -1,0 +1,8 @@
+[32m2025-05-18 21:00:12 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 27a969c5-0dbc-459c-88c4-0b2ad3b6c475 - 42631 - LOGS_CAPTURED - Started capturing logs in process (pid: 42631).
+[32m2025-05-18 21:00:12 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 27a969c5-0dbc-459c-88c4-0b2ad3b6c475 - 42631 - table_name - STEP_START - Started execution of step "table_name".
+[32m2025-05-18 21:00:12 +0900[0m - dagster - [34mINFO[0m - __ASSET_JOB - 27a969c5-0dbc-459c-88c4-0b2ad3b6c475 - table_name - [table_name] 반환 값: user_events
+[32m2025-05-18 21:00:12 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 27a969c5-0dbc-459c-88c4-0b2ad3b6c475 - 42631 - table_name - STEP_OUTPUT - Yielded output "result" of type "String". (Type check passed).
+[32m2025-05-18 21:00:12 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 27a969c5-0dbc-459c-88c4-0b2ad3b6c475 - table_name - Writing file at: /home/wnsgu/slife-dag-engine/.tmp_dagster_home_467trjgk/storage/table_name using PickledObjectFilesystemIOManager...
+[32m2025-05-18 21:00:12 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 27a969c5-0dbc-459c-88c4-0b2ad3b6c475 - 42631 - table_name - ASSET_MATERIALIZATION - Materialized value table_name.
+[32m2025-05-18 21:00:12 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 27a969c5-0dbc-459c-88c4-0b2ad3b6c475 - 42631 - table_name - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-05-18 21:00:12 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 27a969c5-0dbc-459c-88c4-0b2ad3b6c475 - 42631 - table_name - STEP_SUCCESS - Finished execution of step "table_name" in 107ms.

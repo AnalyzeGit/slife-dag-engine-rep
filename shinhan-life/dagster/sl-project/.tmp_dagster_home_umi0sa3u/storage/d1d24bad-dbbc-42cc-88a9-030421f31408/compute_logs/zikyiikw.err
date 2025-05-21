@@ -1,0 +1,27 @@
+[32m2025-05-14 13:59:53 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d1d24bad-dbbc-42cc-88a9-030421f31408 - 119361 - LOGS_CAPTURED - Started capturing logs in process (pid: 119361).
+[32m2025-05-14 13:59:53 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d1d24bad-dbbc-42cc-88a9-030421f31408 - 119361 - visualize_noun_frequency - STEP_START - Started execution of step "visualize_noun_frequency".
+[32m2025-05-14 13:59:53 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d1d24bad-dbbc-42cc-88a9-030421f31408 - visualize_noun_frequency - Loading file from: /home/wnsgu/puzzle/shinhan-life/dagster/sl-project/.tmp_dagster_home_umi0sa3u/storage/count_noun_frequency using PickledObjectFilesystemIOManager...
+[32m2025-05-14 13:59:53 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d1d24bad-dbbc-42cc-88a9-030421f31408 - 119361 - visualize_noun_frequency - LOADED_INPUT - Loaded input "count_noun_frequency" using input manager "io_manager", from output "result" of step "count_noun_frequency"
+[32m2025-05-14 13:59:53 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d1d24bad-dbbc-42cc-88a9-030421f31408 - 119361 - visualize_noun_frequency - STEP_INPUT - Got input "count_noun_frequency" of type "DataFrame". (Type check passed).
+[32m2025-05-14 13:59:54 +0900[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - d1d24bad-dbbc-42cc-88a9-030421f31408 - 119361 - visualize_noun_frequency - STEP_FAILURE - Execution of step "visualize_noun_frequency" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "visualize_noun_frequency"::
+
+NameError: name 'MetadataValue' is not defined
+
+Stack Trace:
+  File "/home/wnsgu/.pyenv/versions/3.11.0/envs/shinhan_env/lib/python3.11/site-packages/dagster/_core/execution/plan/utils.py", line 56, in op_execution_error_boundary
+    yield
+  File "/home/wnsgu/.pyenv/versions/3.11.0/envs/shinhan_env/lib/python3.11/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/home/wnsgu/.pyenv/versions/3.11.0/envs/shinhan_env/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 129, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/wnsgu/.pyenv/versions/3.11.0/envs/shinhan_env/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/home/wnsgu/puzzle/shinhan-life/dagster/sl-project/src/assets/noun_frequency_histogram.py", line 39, in visualize_noun_frequency
+    "plot": MetadataValue.md(f"![plot](file://{IMAGE_DIR / 'noun_histogram.png'})")
+           ^^^^^^^^^^^^^
+[0m

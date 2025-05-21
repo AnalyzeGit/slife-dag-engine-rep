@@ -1,0 +1,30 @@
+[32m2025-05-18 20:59:18 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af061250-fb59-4ee1-86d7-32a8e8c67ad1 - 39880 - LOGS_CAPTURED - Started capturing logs in process (pid: 39880).
+[32m2025-05-18 20:59:18 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af061250-fb59-4ee1-86d7-32a8e8c67ad1 - 39880 - get_dataframe_from_clickhouse - STEP_START - Started execution of step "get_dataframe_from_clickhouse".
+[32m2025-05-18 20:59:18 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af061250-fb59-4ee1-86d7-32a8e8c67ad1 - get_dataframe_from_clickhouse - Loading file from: /home/wnsgu/slife-dag-engine/.tmp_dagster_home_467trjgk/storage/table_name using PickledObjectFilesystemIOManager...
+[32m2025-05-18 20:59:18 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af061250-fb59-4ee1-86d7-32a8e8c67ad1 - 39880 - get_dataframe_from_clickhouse - LOADED_INPUT - Loaded input "table_name" using input manager "io_manager", from output "result" of step "table_name"
+[32m2025-05-18 20:59:18 +0900[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - af061250-fb59-4ee1-86d7-32a8e8c67ad1 - 39880 - get_dataframe_from_clickhouse - STEP_INPUT - Got input "table_name" of type "String". (Type check passed).
+[32m2025-05-18 20:59:19 +0900[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - af061250-fb59-4ee1-86d7-32a8e8c67ad1 - 39880 - get_dataframe_from_clickhouse - STEP_FAILURE - Execution of step "get_dataframe_from_clickhouse" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "get_dataframe_from_clickhouse"::
+
+NameError: name 'uuid' is not defined
+
+Stack Trace:
+  File "/home/wnsgu/.pyenv/versions/3.11.0/envs/clickhouse_env/lib/python3.11/site-packages/dagster/_core/execution/plan/utils.py", line 56, in op_execution_error_boundary
+    yield
+  File "/home/wnsgu/.pyenv/versions/3.11.0/envs/clickhouse_env/lib/python3.11/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/home/wnsgu/.pyenv/versions/3.11.0/envs/clickhouse_env/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 129, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/wnsgu/.pyenv/versions/3.11.0/envs/clickhouse_env/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wnsgu/slife-dag-engine/dags/assets.py", line 88, in get_dataframe_from_clickhouse
+    df_processed, log_df = process_load(df, table_name, case_id)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wnsgu/slife-dag-engine/dags/assets.py", line 46, in process_load
+    'id': str(uuid.uuid4()),
+              ^^^^
+[0m
